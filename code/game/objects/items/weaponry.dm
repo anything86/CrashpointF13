@@ -110,7 +110,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "warclub"
 	item_state = "warclub"
 	attack_verb = list("mashed", "bashed", "hit", "bludgeoned", "whacked")
-	force = 35
+	force = 30
 	throwforce = 25
 	block_chance = 10
 	armour_penetration = 5
@@ -148,6 +148,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	slot_flags = SLOT_BELT
 	force = 15 //Just try to swing a frying pan
 	throw_speed = 1
+	block_chance = 20 //yes
 	throw_range = 2
 	throwforce = 10
 	w_class = 2
@@ -297,12 +298,13 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
-	force = 25
+	force = 30
+	armour_penetration = 15 //folded a million times
 	throwforce = 10
 	w_class = WEIGHT_CLASS_HUGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 0
+	block_chance = 10
 	sharpness = IS_SHARP
 	max_integrity = 200
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
@@ -550,7 +552,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	item_flags = NODROP | ABSTRACT | DROPDEL
 	w_class = WEIGHT_CLASS_HUGE
-	force = 56
+	force = 50
 	throwforce = 0
 	throw_range = 0
 	throw_speed = 0

@@ -226,7 +226,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 50
+	force_wielded = 55
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -564,6 +564,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	force = 10
 	var/force_on = 60
+	armour_penetration = 15 //makes it better than a sledgehammer
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20
 	throw_speed = 2
@@ -789,8 +790,8 @@
 	desc = "A potent weapon capable of cutting through nearly anything. Wielding it in two hands will allow you to deflect gunfire."
 	force_unwielded = 20
 	force_wielded = 40
-	armour_penetration = 100
-	block_chance = 40
+	armour_penetration = 75
+	block_chance = 30
 	throwforce = 20
 	throw_speed = 4
 	sharpness = IS_SHARP
@@ -827,7 +828,7 @@
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
-	force_wielded = 40
+	force_wielded = 50
 
 /obj/item/twohanded/fireaxe/boneaxe/update_icon()
 	icon_state = "bone_axe[wielded]"
@@ -924,7 +925,8 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 12//Likely not able to hit too hard with those noodle arms, bro.
-	force_wielded = 62
+	force_wielded = 50
+	armour_penetration = 5
 	throwforce = 20
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
@@ -941,6 +943,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	slot_flags = ITEM_SLOT_BACK
+	block_chance = 10
 
 /obj/item/twohanded/fireaxe/bmprsword/update_icon()
 	name = "bumper sword"
@@ -970,7 +973,7 @@
 	force_unwielded = 20
 	force_wielded = 40
 	throwforce = 20
-	armour_penetration = 20
+	armour_penetration = 10
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	w_class = WEIGHT_CLASS_BULKY
