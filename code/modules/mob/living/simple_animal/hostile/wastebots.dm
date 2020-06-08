@@ -104,8 +104,8 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot"
-	health = 680
-	maxHealth = 680
+	health = 350
+	maxHealth = 350
 	melee_damage_lower = 48
 	melee_damage_upper = 72
 	extra_projectiles = 4 //5 projectiles
@@ -136,7 +136,7 @@
 			return
 		var/obj/item/grenade/flashbang/sentry/S = new /obj/item/grenade/flashbang/sentry(flashbang_turf)
 		S.preprime(user = null)
-	if(prob(75) || Proj.damage > 26) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want sentrybots to be
+	if(prob(80) || Proj.damage > 20) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want sentrybots to be
 		return ..()
 	else
 		visible_message("<span class='danger'>\The [Proj] bounces off \the [src]'s armor plating!</span>")
@@ -147,7 +147,7 @@
 	visible_message("<span class='warning'>You hear an ominous beep coming from [src]!</span>", "<span class='warning'>You hear an ominous beep!</span>")
 
 /mob/living/simple_animal/hostile/handy/sentrybot/proc/self_destruct()
-	explosion(src,1,2,4,4)
+	explosion(src,0,2,4,4)
 	qdel(src)
 
 /mob/living/simple_animal/hostile/handy/sentrybot/death()
@@ -167,8 +167,8 @@
 	icon_state = "assaultron"
 	icon_living = "assaultron"
 	icon_dead = "gib7"
-	health = 450
-	maxHealth = 450
+	health = 240
+	maxHealth = 240
 	faction = list("wastebot", "enclave")
 	speed = 0
 	melee_damage_lower = 55
