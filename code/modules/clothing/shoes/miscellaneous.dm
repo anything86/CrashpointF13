@@ -87,9 +87,10 @@
 	resistance_flags = NONE
 	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/jackboots/fast
-	slowdown = -1
+	slowdown = 0
 
 /obj/item/clothing/shoes/winterboots
 	name = "winter boots"
@@ -125,6 +126,7 @@
 	resistance_flags = NONE
 	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/workboots/mining
 	name = "mining boots"
@@ -320,6 +322,7 @@
 	item_state = "legionleather"
 	item_color = "cult"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/legionmetal
 	name = "legion metal boots"
@@ -328,6 +331,7 @@
 	item_state = "legionmetal"
 	item_color = "cult"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/legionlegat
 	name = "legion legate boots"
@@ -336,6 +340,7 @@
 	item_state = "legionlegat"
 	item_color = "cult"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/combat //basic syndicate combat boots for nuke ops and mob corpses
 	name = "combat boots"
