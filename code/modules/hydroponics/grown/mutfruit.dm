@@ -25,6 +25,6 @@
 /obj/item/reagent_containers/food/snacks/grown/mutfruit/add_juice()
 	if(..())
 		reagents.add_reagent("nutriment", 3 + round((seed.potency / 20), 1))
-		reagents.add_reagent("radium", 1 + round((seed.potency / 20), 1))
+		reagents.add_reagent("water", 1 + round((seed.potency / 20), 1))
 		bitesize = 1 + round(reagents.total_volume / 3, 1)
 
