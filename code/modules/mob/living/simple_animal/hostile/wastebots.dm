@@ -104,8 +104,8 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot"
-	health = 680
-	maxHealth = 680
+	health = 350
+	maxHealth = 350
 	melee_damage_lower = 48
 	melee_damage_upper = 72
 	extra_projectiles = 4 //5 projectiles
@@ -136,7 +136,7 @@
 			return
 		var/obj/item/grenade/flashbang/sentry/S = new /obj/item/grenade/flashbang/sentry(flashbang_turf)
 		S.preprime(user = null)
-	if(prob(75) || Proj.damage > 26) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want sentrybots to be
+	if(prob(80) || Proj.damage > 20) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want sentrybots to be
 		return ..()
 	else
 		visible_message("<span class='danger'>\The [Proj] bounces off \the [src]'s armor plating!</span>")
@@ -147,7 +147,7 @@
 	visible_message("<span class='warning'>You hear an ominous beep coming from [src]!</span>", "<span class='warning'>You hear an ominous beep!</span>")
 
 /mob/living/simple_animal/hostile/handy/sentrybot/proc/self_destruct()
-	explosion(src,1,2,4,4)
+	explosion(src,0,2,4,4)
 	qdel(src)
 
 /mob/living/simple_animal/hostile/handy/sentrybot/death()
@@ -167,8 +167,8 @@
 	icon_state = "assaultron"
 	icon_living = "assaultron"
 	icon_dead = "gib7"
-	health = 450
-	maxHealth = 450
+	health = 250
+	maxHealth = 250
 	faction = list("wastebot", "enclave")
 	speed = 0
 	melee_damage_lower = 55
@@ -183,10 +183,10 @@
 	icon_state = "robobrain"
 	icon_living = "robobrain"
 	icon_dead = "robobrain"
-	health = 480
-	maxHealth = 480
+	health = 250
+	maxHealth = 250
 	melee_damage_lower = 24
-	melee_damage_upper = 72//why would you even get close?
+	melee_damage_upper = 48//why would you even get close?
 	extra_projectiles = 0
 	ranged_cooldown_time = 24//big ol' 'fuck off' laser
 	stat_attack = UNCONSCIOUS
@@ -219,7 +219,7 @@
 /mob/living/simple_animal/hostile/handy/robobrain/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
-	if(prob(45) || Proj.damage > 26) //far less chance to do something, even in comparison to a sentry bot, due to being an uncommon/boss creature.
+	if(prob(60) || Proj.damage > 20) //far less chance to do something, even in comparison to a sentry bot, due to being an uncommon/boss creature.
 		return ..()
 	else
 		visible_message("<span class='danger'>\The [Proj] shatters on \the [src]'s armor plating!</span>")
@@ -230,7 +230,7 @@
 	visible_message("<span class='warning'>You hear an ominous beep coming from [src]!</span>", "<span class='warning'>You hear an ominous beep!</span>")
 
 /mob/living/simple_animal/hostile/handy/robobrain/proc/self_destruct()
-	explosion(src,1,1,1,1)//tiny explosion, purely because we don't have an actual death sprite.
+	explosion(src,0,1,1,1)//tiny explosion, purely because we don't have an actual death sprite.
 	qdel(src)
 
 /mob/living/simple_animal/hostile/handy/robobrain/death()
