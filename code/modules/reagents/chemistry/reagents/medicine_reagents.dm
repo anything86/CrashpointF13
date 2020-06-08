@@ -302,6 +302,7 @@
 	color = "#DCDCDC"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
+	nutriment_factor = 1 * REAGENTS_METABOLISM
 	taste_description = "sweetness and salt"
 	var/last_added = 0
 	var/maximum_reachable = BLOOD_VOLUME_NORMAL - 10	//So that normal blood regeneration can continue with salglu active

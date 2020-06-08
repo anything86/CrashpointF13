@@ -439,7 +439,7 @@
 	name = "Corn Oil"
 	id = "cornoil"
 	description = "An oil derived from various types of corn."
-	nutriment_factor = 20 * REAGENTS_METABOLISM
+	nutriment_factor = 0.5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "slime"
 
