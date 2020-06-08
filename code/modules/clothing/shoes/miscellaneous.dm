@@ -90,7 +90,8 @@
 	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/jackboots/fast
-	slowdown = 0
+	slowdown = -1
+	desc = "Standard Security combat boots for combat scenarios or combat situations. They seem strangely well polished."
 
 /obj/item/clothing/shoes/winterboots
 	name = "winter boots"
